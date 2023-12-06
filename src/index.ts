@@ -17,5 +17,6 @@ const config: Phaser.Types.Core.GameConfig = {
 }
 
 window.addEventListener('load', () => {
+  console.log('xxxxxxxxxxxxxxxxx')
   enable3d(() => new Phaser.Game(config)).withPhysics('assets/ammo')
 })
