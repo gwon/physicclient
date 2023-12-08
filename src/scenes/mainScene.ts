@@ -9,7 +9,7 @@ export default class MainScene extends Scene3D {
     this.accessThirdDimension()
   }
 
-  create() {
+  async create() {
     // creates a nice scene
     this.third.warpSpeed()
 
@@ -18,7 +18,8 @@ export default class MainScene extends Scene3D {
 
     // adds a box with physics
     this.third.physics.add.box({ x: -1, y: 2 })
-
+    const model = await this.third.load.gltf('./models/table-all.gltf')
+    console.log('.....', model)
     // throws some random object on the scene
     this.third.haveSomeFun()
   }
